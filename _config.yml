@@ -1,0 +1,6 @@
+name: scalescss.com
+description: "Scales CSS Framework"
+url: http://scalescss.com
+markdown: redcarpet
+pygments: true
+exclude: [sass, node_modules, gulp.js, package.json]
