@@ -1,0 +1,26 @@
+{
+  "name": "scalescss.github.io",
+  "version": "1.0.0",
+  "description": "A design-free, independent collection of OOCSS patterns, framework settings, and utilities for quickly building responsive web projects",
+  "main": "index.html",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScalesCSS/scalescss.github.io.git"
+  },
+  "author": "Dave Gillhespy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ScalesCSS/scalescss.github.io/issues"
+  },
+  "homepage": "https://github.com/ScalesCSS/scalescss.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.10.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-minify-css": "^1.2.3",
+    "gulp-sass": "^2.1.1",
+    "scalescss": "^2.2.2"
+  }
+}

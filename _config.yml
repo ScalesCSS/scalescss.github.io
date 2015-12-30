@@ -1,0 +1,18 @@
+# Setup
+title: Scales CSS
+tagline:
+url: http://scalescss.com
+baseurl: ""
+
+# About/contact
+author:
+  name: Dave Gillhespy
+  url: https://davidgillhespy.com
+  email: yodasw16@gmail.com
+
+# Custom vars
+github:
+  repo: https://github.com/ScalesCSS/scalescss.github.io
+
+# Exclude
+exclude: [node_modules, sass, package.json, gulpfile.js]
