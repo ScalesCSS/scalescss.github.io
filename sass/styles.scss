@@ -1,6 +1,125 @@
+@import "../node_modules/breakpoint-sass/stylesheets/breakpoint";
+@import "../node_modules/modularscale-sass/stylesheets/modular-scale";
+@import "../node_modules/susy/sass/susy";
+@import "colors";
 @import "settings";
+@import "ms";
 @import "scales";
+@import "layout";
+@import "typography";
+
+.home-body {
+  background-color: $white;
+  padding: 0 ms(0) ms(0) ms(0);
+}
+
+.docs-body {
+  @include container();
+  background-color: $green--dark;
+}
 
 .hero {
+  margin: 0 -1rem 0;
   text-align: center;
+  background-color: $blue--dark;
+  color: $white;
+
+  a {
+    color: $white;
+  }
+
+  .inner {
+    padding: ms(12) ms(2);
+    margin-bottom: ms(10);
+    @include container(40em);
+  }
+}
+
+.home-main {
+  @include container(40em);
+}
+
+.hero__logo {
+  margin-bottom: ms(4);
+   img {
+     width: ms(20);
+   }
+}
+
+.tagline {
+  font-size: ms(1);
+}
+
+.kaybees {
+  margin-bottom: ms(0);
+  width: 7em;
+}
+
+.doc-header__logo {
+  background-color: $blue--dark;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: ms(2);
+  height: ms(14);
+}
+
+.doc-header__meta {
+  background-color: $grey--light;
+
+  .inner {
+    max-width: 50em;
+    padding: ms(0) ms(0) ms(5);
+
+    @include breakpoint(45em) {
+      height: ms(14);
+      padding: ms(0) ms(6);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+.nav {
+  background-color: $green--dark;
+
+  li:first-child {
+    padding-top: ms(0);
+  }
+
+  > li a {
+    display: block;
+    padding: ms(-4) ms(1) ms(-4) ms(6);
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $blue--dark;
+    }
+  }
+}
+
+.main {
+  background-color: $white;
+
+  .inner {
+    max-width: 50em;
+    padding: ms(0);
+
+    @include breakpoint(45em) {
+      padding: ms(2) ms(6);
+    }
+  }
+
+  @include breakpoint(45em) {
+    min-height: ms(28);
+  }
+}
+
+.inline-code {
+  font-family: monospace;
+  background-color: $grey--light;
+  padding: ms(-6) ms(-4);
+  line-height: 40px;
 }

@@ -1,0 +1,36 @@
+.l-aside {
+  @include breakpoint(45em) {
+    @include span(4);
+  }
+
+  @include breakpoint(66em) {
+    @include span(3);
+  }
+
+  @include breakpoint(96em) {
+    @include span(2);
+  }
+}
+
+.l-main {
+  @include breakpoint(45em) {
+    @include span(8);
+  }
+
+  @include breakpoint(66em) {
+    @include span(9);
+  }
+
+  @include breakpoint(96em) {
+    @include span(10);
+  }
+}
+
+.layout-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feature-box {
+  @include gallery(6);
+}

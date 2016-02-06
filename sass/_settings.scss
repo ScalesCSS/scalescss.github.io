@@ -1,0 +1,26 @@
+// Grid
+$susy: (
+  columns: 12,
+  gutters: 0,
+  global-box-sizing: border-box
+);
+
+// Reset
+$selection-bg-color: $blue--dark;
+$selection-text-color: $white;
+
+// Typography
+$code-block-padding: 0 ms(0) ms(1);
+$code-block-bg-color: $grey--light;
+$code-block-text-color: $black;
+$base-font-size: 1rem;
+$base-line-height: 1.5rem;
+$heading-font-stack: adelle, serif;
+$heading-font-weight: bold;
+
+// Buttons
+$btn-background-color: $green--dark;
+$btn-border-radius: 3px;
+$btn-text-color: $white;
+$btn-hover-background-color: $green--medium;
+$btn-hover-text-color: $blue--dark;

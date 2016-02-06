@@ -3,63 +3,61 @@ layout: default
 title: Home
 ---
 <header class="hero" role="banner">
-  <h1><img src="/images/scales-logo.svg" alt="Scales CSS"></h1>
-  <h2 class="h3">A design-free, independent collection of OOCSS patterns, framework settings, and utilities for quickly building responsive web projects</h2>
-  <ul class="split">
-    <li><span class="split__title">Minified:</span>12.9k</li>
-    <li><span class="split__title">Gzipped:</span>3.4k</li>
-  </ul>
-  <ul class="horizontal-list">
-    <li>
-      <a href="/docs" class="btn">Get Started</a>
-    </li>
-    <li>
-      <a href="https://github.com/ScalesCSS/scales" class="btn">View on Github</a>
-    </li>
-  </ul>
-  <p><a href="https://github.com/ScalesCSS/scales/tree/v2.2.2">v2.2.2</a></p>
+  <div class="inner">
+    <h1 class="hero__logo"><img src="/images/scales-logo.svg" alt="Scales CSS Framework"></h1>
+    <p class="tagline">A design-free, modular collection of OOCSS patterns, framework settings, and utilities for quickly building responsive web projects</p>
+    <ul class="horizontal-list mbs">
+      <li>
+        <a href="/docs" class="btn">Get Started</a>
+      </li>
+      <li>
+        <a href="https://github.com/ScalesCSS/scales" class="btn">View on Github</a>
+      </li>
+    </ul>
+    <p class="mbn"><a class="mrm" href="https://github.com/ScalesCSS/scales/tree/v2.2.2">v2.2.2</a> 3.4kb</p>
+  </div>
 </header>
-<main role="main">
-  <h2>Scales Principles</h2>
-  <div>
+<main role="main" class="home-main">
+  <h2 class="mbh">Scales Principles</h2>
+  <div class="mbh">
     <h3>Purposely Design Free</h3>
     <p>Scales is purposely design free, so you won't have to undo anything to implement your own design. You bring the design, Scales lays the foundation to build it on.</p>
   </div>
-  <div>
+  <div class="mbh">
     <h3>100% Responsive and Layout Independent</h3>
     <p>Scales is not interested in layout. All of the patterns and native elements in Scales are flexible so they adapt to whatever container you decide to put them in.</p>
   </div>
-  <div>
+  <div class="mbh">
     <h3>Make Your Own Decisions</h3>
     <p>Scales makes very few assumptions and let's you choose the tools you want to use. Grid frameworks, responsive breakpoints, build tools, design...these are all things you should decide to use for yourself. A CSS framework should help me solve design problems. It shouldn't do my work for me.</p>
   </div>
-  <div>
+  <div class="mbh">
     <h3>Replace and Extend Styles, Don't Override.</h3>
     <p>Scales is built on the <a href="http://csswizardry.com/2012/06/the-open-closed-principle-applied-to-css/">Open/Closed Principle</a>. All of the default values in Scales can be replaced using Sass variables and should be extended using new classes rather than causing unintended consequences by modifying the base patterns.</p>
   </div>
 
-  <h2>Scales Features</h2>
-  <div>
+  <h2 class="mbh ptm">Scales Features</h2>
+  <div class="feature-box prm mbl">
     <h3>Sass</h3>
     <p>Scales is built using Sass. You can always use the minified output if you don't use Sass, but you lose out on the ability to configure Scales.</p>
   </div>
-  <div>
+  <div class="feature-box plm mbl">
     <h3>BEM Naming Convention</h3>
     <p>Scales uses BEM style naming convention for the OOCSS Patterns and Base Elements. You don't have to use BEM in your own code, but give it a try, you might like it!</p>
   </div>
-  <div>
+  <div class="feature-box prm mbl">
     <h3>Composable OOCSS Patterns</h3>
     <p>The OOCSS patterns that come with Scales are highly reusable and easy to combine with each other and the components of your design. Each pattern does one thing well without side effects.</p>
   </div>
-  <div>
+  <div class="feature-box plm mbl">
     <h3>Base Elements</h3>
     <p>Scales covers the basic HTML elements to give your design a solid starting point. Scales handles the inconsistencies between browsers so you never have to think about them.</p>
   </div>
-  <div>
+  <div class="feature-box prm mbl">
     <h3>Immutable Overrides &amp; Utilities</h3>
     <p>Scales comes with Normalize, a companion Reset file, and a tiny Clearfix utility. It also comes with overrides for spacing and element size.</p>
   </div>
-  <div>
+  <div class="feature-box plm mbl">
     <h3>Highly Configurable</h3>
     <p>Everything in Scales is configurable. Default values for every pattern, utility, base element, and override can be replaced using Sass variables. This allows you to use your design right from the start.</p>
   </div>
