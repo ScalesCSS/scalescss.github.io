@@ -5,8 +5,8 @@ github: https://github.com/ScalesCSS/scales
 ---
 <h2>Dependencies</h2>
 <ul>
-  <li><a href="http://sass-lang.com/">Sass</a> - Either Ruby Sass or Libsass.</li>
-  <li><a href="http://npmjs.com">NPM</a> or <a href="http://bower.io/">Bower</a> - To pull all of the scales repositories together. Not technically required as you could manually install each repo.</li>
+  <li><a href="http://sass-lang.com/">Sass</a> - Either Libsass or Ruby Sass.</li>
+  <li><a href="http://npmjs.com">NPM</a> or <a href="http://bower.io/">Bower</a> - To pull all of the Scales repositories together. Not technically required as you could manually install each repo.</li>
 </ul>
 
 <h2>Setup</h2>
@@ -23,9 +23,9 @@ github: https://github.com/ScalesCSS/scales
 <p>Next you will want to create 3 files (name them whatever you want):</p>
 
 <ol>
-  <li>A settings/variables file. ex. <span class="inline-code">_settings.scss</span></li>
-  <li>A file to import all of the scales repo. ex. <span class="inline-code">_scales.scss</span></li>
-  <li>A main file to import the settings, scales repos, and all of your project partials. ex. <span class="inline-code">styles.scss</span></li>
+  <li>A settings/variables file. ex. <code class="inline-code">_settings.scss</code></li>
+  <li>A file to import all of the scales repo. ex. <code class="inline-code">_scales.scss</code></li>
+  <li>A main file to import the settings, scales repos, and all of your project partials. ex. <code class="inline-code">styles.scss</code></li>
 </ol>
 
 <h2>Settings/Variables</h2>
@@ -34,7 +34,7 @@ github: https://github.com/ScalesCSS/scales
 <p>Have a look at all of the [available variables](https://github.com/ScalesCSS/scales/blob/master/vars.md).</p>
 
 <h2>The Scales Repos</h2>
-<p>Each piece of Scales is in its own repo. Once you have all of the repos in your project, you will need to import them into a single place. I recommend creating a <span class="inline-code">_scales.scss</span> file that imports everything.</p>
+<p>Each piece of Scales is in its own repo. Once you have all of the repos in your project, you will need to import them into a single place. I recommend creating a <code class="inline-code">_scales.scss</code> file that imports everything.</p>
 
 <strong>The order of the imports is very important!</strong>
 
@@ -65,9 +65,9 @@ sass your-project/styles.scss your-project/css/styles.css
 <p>There are many other options for compiling that you can find in the  [Sass Documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html). You can also look into using a task runner like [Gulp](http://gulpjs.com/) or [Grunt](http://gruntjs.com/).</p>
 
 <h2>Browser Support</h2>
-<p>Scales uses <span class="inline-code">box-sizing: border-box;</span>, and <span class="inline-code">display: table-cell;</span>, neither of which are supported in IE7 and under. There are a few media queries, but they are an enhancement. Thus, Scales is only for IE9+ and any modern browser, but IE8 is also mostly covered.</p>
+<p>Scales uses <code class="inline-code">box-sizing: border-box;</code>, and <code class="inline-code">display: table-cell;</code>, neither of which are supported in IE7 and under. There are a few media queries, but they are an enhancement. Thus, Scales is only for IE9+ and any modern browser, but IE8 is also mostly covered.</p>
 
 
 
 <h2>Pattern Library</h2>
-<p>This repo includes an <span class="inline-code">index.html</span> file that serves are a basic pattern library for Scales. It shows all of the available base settings and patterns. This can be used as a reference or styled into a more complete pattern library with your project's patterns as well.</p>
+<p>This repo includes an <code class="inline-code">index.html</code> file that serves are a basic pattern library for Scales. It shows all of the available base settings and patterns. This can be used as a reference or styled into a more complete pattern library with your project's patterns as well.</p>

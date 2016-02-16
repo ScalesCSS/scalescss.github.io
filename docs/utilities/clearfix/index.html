@@ -1,5 +1,44 @@
 ---
 layout: docs
-title: Utilities Clearfix
+title: Utilities/Clearfix
+github: https://github.com/ScalesCSS/utilities-clearfix
 ---
-hi
+<p>A super minimal clearfix utility for Scales.</p>
+
+<h2>Dependencies</h2>
+<ul>
+  <li><a href="http://sass-lang.com/">Sass</a> - Either Libsass or Ruby Sass.</li>
+  <li><a href="http://npmjs.com">NPM</a> or <a href="http://bower.io/">Bower</a> - To install and manage the Scales repositories. Not technically required as you could manually install.</li>
+</ul>
+
+<h2>Installation</h2>
+<pre><code>
+  npm install --save-dev scales-utilities-clearfix
+</code></pre>
+<p>or</p>
+<pre><code>
+  bower install --save-dev scales-utilities-clearfix
+</code></pre>
+
+<h2>Usage</h2>
+<p>A clearfix is used to force an element to self-clear its floated children.</p>
+<p>It can be extended in your sass files, but can also be used as a class. I recommend only using it this way for debugging purposes in you browser dev tools.</p>
+
+<pre><code>
+  .parent-class {
+    @extend %clearfix
+  }
+</code></pre>
+
+<p>For debugging:</p>
+<pre><code>
+  &lt;div class="clearfix"&gt;
+    &lt;some floated elements&gt;
+  &lt;/div&gt;
+</code></pre>
+
+<h2>Available Classes</h2>
+<ul>
+  <li><code class="inline-code">%clearfix</code> - extend in your sass files</li>
+  <li><code class="inline-code">.clearfix</code> - For debugging</li>
+</ul>

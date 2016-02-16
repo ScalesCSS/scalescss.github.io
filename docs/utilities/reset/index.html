@@ -5,6 +5,12 @@ github: https://github.com/ScalesCSS/utilities-reset
 ---
 <p>The Scales Reset Utility is a companion to Normalize.css that resets a few things that are still useful in a traditional reset. Borrows from <a href="http://h5bp.com/">HTML5 Boilerplate</a> and <a href="http://csswizardry.com/2011/10/reset-restarted">Reset Restarted<a/>.</p>
 
+<h2>Dependencies</h2>
+<ul>
+  <li><a href="http://sass-lang.com/">Sass</a> - Either Libsass or Ruby Sass.</li>
+  <li><a href="http://npmjs.com">NPM</a> or <a href="http://bower.io/">Bower</a> - To install and manage the Scales repositories. Not technically required as you could manually install.</li>
+</ul>
+
 <h2>Installation</h2>
 
 <pre><code>
@@ -17,20 +23,20 @@ github: https://github.com/ScalesCSS/utilities-reset
 
 <h2>Usage</h2>
 
-<p>Should be loaded immediately after <span class="inline-code">_normalize.scss</span>.</p>
+<p>Should be loaded immediately after <code class="inline-code">_normalize.scss</code>.</p>
 
 <h2>Available Variables</h2>
 
 <ul>
-  <li><span class="inline-code">$selection-bg-color</span></li>
-  <li><span class="inline-code">$selection-text-color</span></li>
+  <li><code class="inline-code">$selection-bg-color</code></li>
+  <li><code class="inline-code">$selection-text-color</code></li>
 </ul>
 
 <h3>The Scales Namespace Variable</h3>
 
-<p>All Scales patterns expose the <span class="inline-code">$scales-namespace</span> variable.</p>
+<p>All Scales patterns expose the <code class="inline-code">$scales-namespace</code> variable.</p>
 
-<p><span class="inline-code">$scales-namespace</span> accepts a string that will prefix all Scales classes. The default value is <span class="inline-code">null</span>.</p>
+<p><code class="inline-code">$scales-namespace</code> accepts a string that will prefix all Scales classes. The default value is <code class="inline-code">null</code>.</p>
 
 <p>To give all Scales classes a namespace, you will need to set this variable in a file that is imported before any Scales files. For example:</p>
 

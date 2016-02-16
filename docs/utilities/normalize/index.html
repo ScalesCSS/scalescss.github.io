@@ -7,6 +7,12 @@ github: https://github.com/ScalesCSS/utilities-normalize
 
 <p>The project relies on researching the differences between default browser styles in order to precisely target only the styles that need or benefit from normalizing.</p>
 
+<h2>Dependencies</h2>
+<ul>
+  <li><a href="http://sass-lang.com/">Sass</a> - Either Libsass or Ruby Sass.</li>
+  <li><a href="http://npmjs.com">NPM</a> or <a href="http://bower.io/">Bower</a> - To install and manage the Scales repositories. Not technically required as you could manually install.</li>
+</ul>
+
 <h2>Installation</h2>
 
 <pre><code>
@@ -21,7 +27,7 @@ github: https://github.com/ScalesCSS/utilities-normalize
 
 <p>No other styles should come before Normalize.css.</p>
 
-<p>It is recommended that you include the <span class="inline-code">_normalize.scss</span> file as untouched library code.</p>
+<p>It is recommended that you include the <code class="inline-code">_normalize.scss</code> file as untouched library code.</p>
 
 <h2>What does it do?</h2>
 
@@ -54,31 +60,31 @@ github: https://github.com/ScalesCSS/utilities-normalize
   pre, code, kbd, samp
 </code></pre>
 
-<p>The <span class="inline-code">font-family: monospace, monospace</span> hack fixes the inheritance and scaling of font-size for preformated text. The duplication of <span class="inline-code">monospace</span> is intentional. <a href="http://en.wikipedia.org/wiki/User:Davidgothberg/Test59">Source</a>.</p>
+<p>The <code class="inline-code">font-family: monospace, monospace</code> hack fixes the inheritance and scaling of font-size for preformated text. The duplication of <code class="inline-code">monospace</code> is intentional. <a href="http://en.wikipedia.org/wiki/User:Davidgothberg/Test59">Source</a>.</p>
 
 <pre><code>
   sub, sup
 </code></pre>
 
-<p>Normally, using <span class="inline-code">sub</span> or <span class="inline-code">sup</span> affects the line-box height of text in all browsers. <a href="http://gist.github.com/413930">Source</a>.</p>
+<p>Normally, using <code class="inline-code">sub</code> or <code class="inline-code">sup</code> affects the line-box height of text in all browsers. <a href="http://gist.github.com/413930">Source</a>.</p>
 
 <pre><code>
   svg:not(:root)
 </code></pre>
 
-<p>Adding <span class="inline-code">overflow: hidden</span> fixes IE9's SVG rendering. Earlier versions of IE don't support SVG, so we can safely use the <span class="inline-code">:not()</span> and <span class="inline-code">:root</span> selectors that modern browsers use in the default UA stylesheets to apply this style. <a href="http://lists.w3.org/Archives/Public/public-svg-wg/2008JulSep/0339.html">SVG Mailing List discussion</a></p>
+<p>Adding <code class="inline-code">overflow: hidden</code> fixes IE9's SVG rendering. Earlier versions of IE don't support SVG, so we can safely use the <code class="inline-code">:not()</code> and <code class="inline-code">:root</code> selectors that modern browsers use in the default UA stylesheets to apply this style. <a href="http://lists.w3.org/Archives/Public/public-svg-wg/2008JulSep/0339.html">SVG Mailing List discussion</a></p>
 
 <pre><code>
   input[type="search"]
 </code></pre>
 
-<p>The search input is not fully stylable by default. In Chrome and Safari on OSX/iOS you can't control <span class="inline-code">font</span>, <span class="inline-code">padding</span>, <span class="inline-code">border</span>, or <span class="inline-code">background</span>. In Chrome and Safari on Windows you can't control <span class="inline-code">border</span> properly. It will apply <span class="inline-code">border-width</span> but will only show a border color (which cannot be controlled) for the outer 1px of that border. Applying <span class="inline-code">-webkit-appearance: textfield</span> addresses these issues without removing the benefits of search inputs (e.g. showing past searches).</p>
+<p>The search input is not fully stylable by default. In Chrome and Safari on OSX/iOS you can't control <code class="inline-code">font</code>, <code class="inline-code">padding</code>, <code class="inline-code">border</code>, or <code class="inline-code">background</code>. In Chrome and Safari on Windows you can't control <code class="inline-code">border</code> properly. It will apply <code class="inline-code">border-width</code> but will only show a border color (which cannot be controlled) for the outer 1px of that border. Applying <code class="inline-code">-webkit-appearance: textfield</code> addresses these issues without removing the benefits of search inputs (e.g. showing past searches).</p>
 
 <pre><code>
   legend
 </code></pre>
 
-<p>Adding <span class="inline-code">border: 0</span> corrects an IE 8–11 bug where <span class="inline-code">color</span> (yes, <span class="inline-code">color</span>) is not inherited by <span class="inline-code">legend</span>.</p>
+<p>Adding <code class="inline-code">border: 0</code> corrects an IE 8–11 bug where <code class="inline-code">color</code> (yes, <code class="inline-code">color</code>) is not inherited by <code class="inline-code">legend</code>.</p>
 
 <h2>Acknowledgements</h2>
 
