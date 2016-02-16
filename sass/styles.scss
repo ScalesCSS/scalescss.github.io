@@ -88,7 +88,7 @@
     padding-top: ms(0);
   }
 
-  > li a {
+  a {
     display: block;
     padding: ms(-4) ms(1) ms(-4) ms(6);
     color: $white;
@@ -97,6 +97,17 @@
     &:hover {
       background-color: $blue--dark;
     }
+  }
+}
+
+.btn--callout {
+  border: 3px solid $white;
+  margin: 0 ms(1) ms(-6);
+  text-align: center;
+
+  &:hover {
+    color: $white;
+    border: 3px solid $blue--dark;
   }
 }
 

@@ -1,5 +1,41 @@
 ---
 layout: docs
-title: Utilities Reset
+title: Utilities/Reset
+github: https://github.com/ScalesCSS/utilities-reset
 ---
-hi
+<p>The Scales Reset Utility is a companion to Normalize.css that resets a few things that are still useful in a traditional reset. Borrows from [HTML5 Boilerplate](http://h5bp.com/) and [Reset Restarted](http://csswizardry.com/2011/10/reset-restarted).</p>
+
+<h2>Installation</h2>
+
+<pre><code>
+  npm install --save-dev scales-utilities-reset
+</code></pre>
+<p>or</p>
+<pre><code>
+  bower install --save-dev scales-utilities-reset
+</code></pre>
+
+<h2>Usage</h2>
+
+<p>Should be loaded immediately after <span class="inline-code">_normalize.scss</span>.</p>
+
+<h2>Available Variables</h2>
+
+<ul>
+  <li><span class="inline-code">$selection-bg-color</span></li>
+  <li><span class="inline-code">$selection-text-color</span></li>
+</ul>
+
+<h3>The Scales Namespace Variable</h3>
+
+<p>All Scales patterns expose the <span class="inline-code">$scales-namespace</span> variable.</p>
+
+<p><span class="inline-code">$scales-namespace</span> accepts a string that will prefix all Scales classes. The default value is <span class="inline-code">null</span>.</p>
+
+<p>To give all Scales classes a namespace, you will need to set this variable in a file that is imported before any Scales files. For example:</p>
+
+<pre><code>
+  @import your-project/settings; // $scales-namespace is set in this file
+  @import your-project/scales; // Imports the Scales library
+  @import your-project/project // The rest of your project imports
+</code></pre>
