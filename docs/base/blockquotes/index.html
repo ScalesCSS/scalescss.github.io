@@ -1,5 +1,47 @@
 ---
 layout: docs
-title: Base Blockquotes
+title: Base/Blockquotes
+github: https://github.com/ScalesCSS/base-blockquotes
 ---
-hi
+<p>These are the base styles for block quotes.</p>
+
+<h2>Dependencies</h2>
+<ul>
+  <li><a href="http://sass-lang.com/">Sass</a> - Either Libsass or Ruby Sass.</li>
+  <li><a href="http://npmjs.com">NPM</a> or <a href="http://bower.io/">Bower</a> - To install and manage the Scales repositories. Not technically required as you could manually install.</li>
+</ul>
+
+<h2>Installation</h2>
+
+<pre><code>
+  npm install --save-dev scales-base-lists
+</code></pre>
+<p>or</p>
+<pre><code>
+  bower install --save-dev scales-base-lists
+</code></pre>
+
+<h2>Usage</h2>
+<p>A nice semantic way to markup a blockquote is using the `figure` element. See <a href="http://alistapart.com/blog/post/more-thoughts-about-blockquotes-than-are-strictly-required">A List Apart</a> for the rationale behind this approach.</p>
+
+<h3>Default blockquote</h3>
+<pre><code>
+  &lt;figure&gt;
+    &lt;blockquote class=&quot;blockquote&quot;&gt;
+      &lt;p class=&quot;blockquote__quote&quot;&gt;For me, it is far better to grasp the Universe as it really is than to persist in delusion, however satisfying and reassuring.&lt;/p&gt;
+    &lt;/blockquote&gt;
+    &lt;figcaption class=&quot;blockquote__source&quot;&gt;Carl Sagan, &lt;cite&gt;The Demon-Haunted World&lt;/cite&gt;&lt;/figcaption&gt;
+  &lt;/figure&gt;
+</code></pre>
+
+<h2>Available Classes</h2>
+<ul>
+  <li><code class="inline-code">.blockquote</code></li>
+  <li><code class="inline-code">.blockquote__quote</code></li>
+  <li><code class="inline-code">.blockquote__source</code></li>
+</ul>
+
+<h2>Available Variables</h2>
+<ul>
+  <li><code class="inline-code">$source-prefix</code> : "—"</li>
+</ul>
