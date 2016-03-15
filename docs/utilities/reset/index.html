@@ -31,17 +31,3 @@ github: https://github.com/ScalesCSS/utilities-reset
   <li><code class="inline-code">$selection-bg-color</code></li>
   <li><code class="inline-code">$selection-text-color</code></li>
 </ul>
-
-<h3>The Scales Namespace Variable</h3>
-
-<p>All Scales patterns expose the <code class="inline-code">$scales-namespace</code> variable.</p>
-
-<p><code class="inline-code">$scales-namespace</code> accepts a string that will prefix all Scales classes. The default value is <code class="inline-code">null</code>.</p>
-
-<p>To give all Scales classes a namespace, you will need to set this variable in a file that is imported before any Scales files. For example:</p>
-
-<pre><code>
-  @import your-project/settings; // $scales-namespace is set in this file
-  @import your-project/scales; // Imports the Scales library
-  @import your-project/project // The rest of your project imports
-</code></pre>
