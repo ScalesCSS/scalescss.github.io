@@ -1,5 +1,72 @@
 ---
 layout: docs
-title: Base Typography
+title: Base/Typography
+github: https://github.com/ScalesCSS/base-typography
 ---
-hi
+<p>Base styles for typographic elements in Scales.</p>
+
+<h2>Dependencies</h2>
+<ul>
+  <li><a href="http://sass-lang.com/">Sass</a> - Either Libsass or Ruby Sass.</li>
+  <li><a href="http://npmjs.com">NPM</a> or <a href="http://bower.io/">Bower</a> - To install and manage the Scales repositories. Not technically required as you could manually install.</li>
+</ul>
+
+<h2>Installation</h2>
+<pre><code>
+  npm install --save-dev scales-base-typography
+</code></pre>
+<p>or</p>
+<pre><code>
+  bower install --save-dev scales-base-typography
+</code></pre>
+
+<h2>Usage</h2>
+<p>Scales provides default typography for headings, text elements, lede paragraphs, and code blocks.</p>
+
+<h3>Lede Paragraph</h3>
+<p>The lede paragraph is styled slightly larger than the base font size (1.25rem instead of 1rem).</p>
+<pre><code>
+  &lt;p class="lede"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus augue cursus. Sed vestibulum felis vel euismod aliquet. Suspendisse sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu ultricies auctor, velit nunc commodo sapien, pharetra maximus augue dui eget dui.&lt;/p&gt;
+</code></pre>
+
+<h3>Code Block</h3>
+<pre><code>
+  &lt;pre&gt;&lt;code&gt;
+    code goes here
+  &lt;/code&gt;&lt;/pre&gt;
+</code></pre>
+
+<h2>Available Classes</h2>
+<ul>
+<li><code class="inline-code">.lede</code> or <code class="inline-code">.lead</code></li>
+</ul>
+
+<h3>Heading Utility Classes</h3>
+<ul>
+  <li><code class="inline-code">.h1</code> , <code class="inline-code">.alpha</code></li>
+  <li><code class="inline-code">.h2</code> , <code class="inline-code">.beta</code></li>
+  <li><code class="inline-code">.h3</code> , <code class="inline-code">.gamma</code></li>
+  <li><code class="inline-code">.h4</code> , <code class="inline-code">.delta</code></li>
+  <li><code class="inline-code">.h5</code> , <code class="inline-code">.epsilon</code></li>
+  <li><code class="inline-code">.h6</code> , <code class="inline-code">.zeta</code></li>
+</ul>
+
+<h2>Available Variables</h2>
+<ul>
+  <li><code class="inline-code">$base-text-color</code> : #333333</li>
+  <li><code class="inline-code">$code-block-padding</code> : 0 1em 1em</li>
+  <li><code class="inline-code">$code-block-bg-color</code> : #444444</li>
+  <li><code class="inline-code">$code-block-text-color</code> : #ffffff</li>
+  <li><code class="inline-code">$base-font-stack</code> : "Helvetica Neue", helvetica, arial, sans-serif</li>
+  <li><code class="inline-code">$heading-font-stack</code> : Times, "Times New Roman", serif</li>
+  <li><code class="inline-code">$heading-font-weight</code> : normal</li>
+  <li><code class="inline-code">$base-font-size</code> : 1rem</li>
+  <li><code class="inline-code">$base-line-height</code> : 1.5</li>
+  <li><code class="inline-code">$lede-font-size</code> : 1.25rem</li>
+  <li><code class="inline-code">$h1-size</code> : 2.25rem</li>
+  <li><code class="inline-code">$h2-size</code> : 2rem</li>
+  <li><code class="inline-code">$h3-size</code> : 1.75rem</li>
+  <li><code class="inline-code">$h4-size</code> : 1.5rem</li>
+  <li><code class="inline-code">$h5-size</code> : 1.25rem</li>
+  <li><code class="inline-code">$h6-size</code> : 1rem</li>
+</ul>
