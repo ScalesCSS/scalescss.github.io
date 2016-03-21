@@ -1,5 +1,325 @@
 ---
 layout: docs
 title: Base Forms
+github: https://github.com/ScalesCSS/base-forms
 ---
-hi
+<p>These are the base styles for creating forms.</p>
+
+<h2>Dependencies</h2>
+<ul>
+  <li><a href="http://sass-lang.com/">Sass</a> - Either Libsass or Ruby Sass.</li>
+  <li><a href="http://npmjs.com">NPM</a> or <a href="http://bower.io/">Bower</a> - To install and manage the Scales repositories. Not technically required as you could manually install.</li>
+</ul>
+
+<h2>Installation</h2>
+
+<pre><code>
+  npm install --save-dev scales-base-forms
+</code></pre>
+<p>or</p>
+<pre><code>
+  bower install --save-dev scales-base-forms
+</code></pre>
+
+<h2>Usage</h2>
+
+<p>Scales provides default stacked forms, forms using an unordered/ordered list, inline forms, and inline form containers with stacked label/input. It also provides a few helper classes for additional fields within the form.</p>
+
+<h3>Default stacked</h3>
+
+<p>The default doesn't require any special classes.</p>
+
+<pre><code>
+  &lt;form&gt;
+      &lt;label for="account"&gt;Account #&lt;small class="form-label--additional"&gt;(Cannot Change)&lt;/small&gt;&lt;/label&gt;
+      &lt;input class="text-input" id="account" type="num" value="123456789" readonly&gt;
+
+      &lt;label for="email"&gt;Email&lt;/label&gt;
+      &lt;input class="text-input" id="email" type="email" placeholder="Email"&gt;
+      &lt;span class="helper-text"&gt;Enter your email address&lt;/span&gt;
+
+      &lt;label for="password"&gt;Password&lt;/label&gt;
+      &lt;input class="text-input" id="password" type="password" placeholder="Password" disabled&gt;
+
+      &lt;label for="gender"&gt;Gender&lt;/label&gt;
+      &lt;select id="gender"&gt;
+          &lt;option&gt;Female&lt;/option&gt;
+          &lt;option&gt;Male&lt;/option&gt;
+          &lt;option&gt;Other&lt;/option&gt;
+      &lt;/select&gt;
+
+      &lt;label&gt;Introduce yourself&lt;/label&gt;
+      &lt;textarea&gt;&lt;/textarea&gt;
+
+      &lt;label for="newsletter"&gt;
+          &lt;input id="newsletter" type="checkbox"&gt; Send me the newsletter
+      &lt;/label&gt;
+
+      &lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
+  &lt;/form&gt;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <form>
+    <label for="account">Account #<small class="form-label--additional">(Cannot Change)</small></label>
+    <input class="text-input" id="account" type="num" value="123456789" readonly>
+
+    <label for="email">Email</label>
+    <input class="text-input" id="email" type="email" placeholder="Email">
+    <span class="helper-text">Enter your email address</span>
+
+    <label for="password">Password</label>
+    <input class="text-input" id="password" type="password" placeholder="Password" disabled>
+
+    <label for="gender">Gender</label>
+    <select id="gender">
+      <option>Female</option>
+      <option>Male</option>
+      <option>Other</option>
+    </select>
+
+    <label>Introduce yourself</label>
+    <textarea></textarea>
+
+    <label for="newsletter">
+      <input id="newsletter" type="checkbox"> Send me the newsletter
+    </label>
+
+    <button type="submit" class="btn">Sign in</button>
+  </form>
+</div>
+
+<h3>Using a list</h3>
+
+<p>Use <code class="inline-code">.form-list</code> on a <code class="inline-code">ul</code> inside the <code class="inline-code">form</code> and <code class="inline-code">.input-container</code> on the <code class="inline-code">li</code>'s.</p>
+<p>To see the benefits of this approach, read <a href="http://davidgillhespy.com/2014/02/19/using-unordered-lists-for-forms.html">Using Unordered Lists for Forms</a>.</p>
+
+<pre><code>
+  &lt;form&gt;
+      &lt;ul class="form-list"&gt;
+          &lt;li class="input-container"&gt;
+              &lt;label for="account"&gt;Account #&lt;small class="form-label--additional"&gt;(Cannot Change)&lt;/small&gt;&lt;/label&gt;
+              &lt;input class="text-input" id="account" type="num" value="123456789" readonly&gt;
+          &lt;/li&gt;
+          &lt;li class="input-container"&gt;
+              &lt;label for="email"&gt;Email&lt;/label&gt;
+              &lt;input class="text-input" id="email" type="email" placeholder="Email"&gt;
+          &lt;/li&gt;
+          &lt;li class="input-container"&gt;
+              &lt;label for="password"&gt;Password&lt;/label&gt;
+              &lt;input class="text-input" id="password" type="password" placeholder="Password" disabled&gt;
+          &lt;/li&gt;
+          &lt;li class="input-container"&gt;
+              &lt;label for="gender"&gt;Gender&lt;/label&gt;
+              &lt;select id="gender"&gt;
+                  &lt;option&gt;Female&lt;/option&gt;
+                  &lt;option&gt;Male&lt;/option&gt;
+                  &lt;option&gt;Other&lt;/option&gt;
+              &lt;/select&gt;
+          &lt;/li&gt;
+          &lt;li class="input-container"&gt;
+              &lt;label&gt;Introduce yourself&lt;/label&gt;
+              &lt;textarea&gt;&lt;/textarea&gt;
+          &lt;/li&gt;
+          &lt;li class="input-container"&gt;
+              &lt;label for="newsletter"&gt;
+                  &lt;input id="newsletter" type="checkbox"&gt; Send me the newsletter
+              &lt;/label&gt;
+          &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
+  &lt;/form&gt;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <form>
+    <ul class="form-list">
+      <li class="input-container">
+        <label for="account">Account #<small class="form-label--additional">(Cannot Change)</small></label>
+        <input class="text-input" id="account" type="num" value="123456789" readonly>
+      </li>
+      <li class="input-container">
+        <label for="email">Email</label>
+        <input class="text-input" id="email" type="email" placeholder="Email">
+      </li>
+      <li class="input-container">
+        <label for="password">Password</label>
+        <input class="text-input" id="password" type="password" placeholder="Password" disabled>
+      </li>
+      <li class="input-container">
+        <label for="gender">Gender</label>
+        <select id="gender">
+            <option>Female</option>
+            <option>Male</option>
+            <option>Other</option>
+        </select>
+      </li>
+      <li class="input-container">
+        <label>Introduce yourself</label>
+        <textarea></textarea>
+      </li>
+      <li class="input-container">
+        <label for="newsletter">
+            <input id="newsletter" type="checkbox"> Send me the newsletter
+        </label>
+      </li>
+    </ul>
+    <button type="submit" class="btn">Sign in</button>
+  </form>
+</div>
+
+<h3>Inline</h3>
+
+<p>Use <code class="inline-code">.form-inline</code> to force the <code class="inline-code">form</code> elements into a single inline row.</p>
+
+<pre><code>
+  &lt;form class="form-inline"&gt;
+      &lt;label for="email"&gt;Email&lt;/label&gt;
+      &lt;input class="text-input" id="email" type="email" placeholder="Email"&gt;
+
+      &lt;label for="password"&gt;Password&lt;/label&gt;
+      &lt;input class="text-input" id="password" type="password" placeholder="Password" disabled&gt;
+
+      &lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
+  &lt;/form&gt;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <form class="form-inline">
+    <label for="email">Email</label>
+    <input class="text-input" id="email" type="email" placeholder="Email">
+
+    <label for="password">Password</label>
+    <input class="text-input" id="password" type="password" placeholder="Password" disabled>
+
+    <button type="submit" class="btn">Sign in</button>
+  </form>
+</div>
+
+<h3>Inline input containers with stacked label/input</h3>
+
+<p>Use <code class="inline-code">.input-container--inline</code> with <code class="inline-code">.input-container</code> to force the containers into a single row and control the vertical alignment of the fields.</p>
+<p><a href="https://github.com/ScalesCSS/base-forms/issues/2">KNOWN ISSUE</a>: This works really nicely for label/input pairs, but for elements like <code class="inline-code">button</code> that would usually be alone, the vertical alignment (default for Scales is <code class="inline-code">top</code>) will probably look weird and you will have to write additional styles to control this problem.</p>
+
+<pre><code>
+  &lt;form&gt;
+      &lt;ul class="form-list"&gt;
+          &lt;li class="input-container input-container--inline"&gt;
+              &lt;label for="email"&gt;Email&lt;/label&gt;
+              &lt;input class="text-input" id="email" type="email" placeholder="Email"&gt;
+          &lt;/li&gt;
+          &lt;li class="input-container input-container--inline"&gt;
+              &lt;label for="password"&gt;Password&lt;/label&gt;
+              &lt;input class="text-input" id="password" type="password" placeholder="Password" disabled&gt;
+          &lt;/li&gt;
+          &lt;li class="input-container input-container--inline"&gt;
+              &lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
+          &lt;/li&gt;
+      &lt;/ul&gt;
+  &lt;/form&gt;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <form>
+    <ul class="form-list">
+      <li class="input-container input-container--inline">
+        <label for="email">Email</label>
+        <input class="text-input" id="email" type="email" placeholder="Email">
+      </li>
+      <li class="input-container input-container--inline">
+        <label for="password">Password</label>
+        <input class="text-input" id="password" type="password" placeholder="Password" disabled>
+      </li>
+      <li class="input-container input-container--inline">
+        <button type="submit" class="btn">Sign in</button>
+      </li>
+    </ul>
+  </form>
+</div>
+
+<h3>Helper Classes</h3>
+<p>Scales comes with a few classes that can be applied to elements within a form to add additional functionality</p>
+
+<h4>Form Label</h4>
+<p>This class can be used to make an element look like a label if an actual label isn't suitable.</p>
+<p><code class="inline-code">.form-label</code></p>
+
+<h4>Form Label Additonal</h4>
+<p>This class is for extra help text in a label.</p>
+<p><code class="inline-code">.form-label--additional</code></p>
+<p>Use like this:</p>
+<pre><code>
+  &lt;label for="account"&gt;Account #&lt;small class="form-label--additional"&gt;(Cannot Change)&lt;/small&gt;&lt;/label&gt;
+</code></pre>
+<div class="mbl">
+  <h5>Demo</h5>
+  <form>
+    <label for="account">Account #<small class="form-label--additional">(Cannot Change)</small></label>
+    <input class="text-input" id="account" type="num" value="123456789" readonly>
+  </form>
+</div>
+
+<h4>Text Input</h4>
+<p>Instead of a <code class="inline-code">[type]</code> selector for each kind of form input, just use this class to target all of the inputs that are meant for text.</p>
+<p><code class="inline-code">.text-input</code></p>
+<p>Use like this:</p>
+<pre><code>
+  &lt;input type="text" class="text-input"&gt;
+  &lt;input type="email" class="text-input"&gt;
+  &lt;input type="password" class="text-input"&gt;
+</code></pre>
+
+<h4>Helper Text</h4>
+<p>This class displays extra help text after a field when that field is in focus.</p>
+<p>NOTE: Can't be used with <code class="inline-code">.form-inline</code>.</p>
+<p><code class="inline-code">.helper-text</code></p>
+<p>Use like this:</p>
+<pre><code>
+  &lt;label for="email"&gt;Email&lt;/label&gt;
+  &lt;input class="text-input" id="email" type="email" placeholder="Email"&gt;
+  &lt;span class="helper-text"&gt;Enter your email address&lt;/span&gt;
+</code></pre>
+<div class="mbl">
+  <h5>Demo</h5>
+  <form>
+    <label for="email">Email</label>
+    <input class="text-input" id="email" type="email" placeholder="Email">
+    <span class="helper-text">Enter your email address</span>
+  </form>
+</div>
+
+<h2>Available Classes</h2>
+
+<ul>
+  <li><code class="inline-code">.form-list</code></li>
+  <li><code class="inline-code">.input-container</code></li>
+  <li><code class="inline-code">.input-container--inline</code></li>
+  <li><code class="inline-code">.form-label</code></li>
+  <li><code class="inline-code">.form-label--additional</code></li>
+  <li><code class="inline-code">.text-input</code></li>
+  <li><code class="inline-code">.form-inline</code></li>
+  <li><code class="inline-code">.helper-text</code></li>
+</ul>
+
+<h2>Available Variables</h2>
+
+<ul>
+  <li><code class="inline-code">$fieldset-padding</code></li>
+  <li><code class="inline-code">$text-input-padding</code></li>
+  <li><code class="inline-code">$text-input-border-width</code></li>
+  <li><code class="inline-code">$text-input-border-style</code></li>
+  <li><code class="inline-code">$text-input-border-color</code></li>
+  <li><code class="inline-code">$text-input-border-radius</code></li>
+  <li><code class="inline-code">$input-container-margin-bottom</code></li>
+  <li><code class="inline-code">$input-container-inline-valign</code></li>
+  <li><code class="inline-code">$input-disabled-border-color</code></li>
+  <li><code class="inline-code">$input-disabled-background-color</code></li>
+  <li><code class="inline-code">$input-disabled-text-color</code></li>
+  <li><code class="inline-code">$input-readonly-border-color</code></li>
+  <li><code class="inline-code">$input-readonly-background-color</code></li>
+  <li><code class="inline-code">$input-readonly-text-color</code></li>
+</ul>
