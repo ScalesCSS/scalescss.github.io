@@ -1,5 +1,566 @@
 ---
 layout: docs
-title: Base Tables
+title: Base/Tables
+github: https://github.com/ScalesCSS/base-tables
 ---
-hi
+<p>These are the base styles for creating tables.</p>
+
+<h2>Dependencies</h2>
+<ul>
+  <li><a href="http://sass-lang.com/">Sass</a> - Either Libsass or Ruby Sass.</li>
+  <li><a href="http://npmjs.com">NPM</a> or <a href="http://bower.io/">Bower</a> - To install and manage the Scales repositories. Not technically required as you could manually install.</li>
+</ul>
+
+<h2>Installation</h2>
+
+<pre><code>
+  npm install --save-dev scales-base-tables
+</code></pre>
+<p>or</p>
+<pre><code>
+  bower install --save-dev scales-base-tables
+</code></pre>
+
+<h2>Usage</h2>
+<p>Tables can get pretty crazy. Scales provides classes related to cell spacing, borders, stripes, and numerical values.</p>
+
+<h3>Default table</h3>
+<p>The default doesn't require any classes. It makes tables 100% width and applies some default vertical and text alignment for <code class="inline-code">colspan</code> and <code class="inline-code">rowspan</code>.</p>
+<p>You can also use the <code class="inline-code">.numerical</code> class to right align numerical values in the cell.</p>
+
+<pre><code>
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Lorem&lt;/th&gt;
+        &lt;th&gt;Ipsum&lt;/th&gt;
+        &lt;th&gt;Dolor&lt;/th&gt;
+        &lt;th&gt;Sit&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;th rowspan="3"&gt;Sit&lt;/th&gt;
+        &lt;td&gt;Dolor&lt;/td&gt;
+        &lt;td class="numerical"&gt;03.788&lt;/td&gt;
+        &lt;td&gt;Lorem&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Dolor&lt;/td&gt;
+        &lt;td class="numerical"&gt;32.210&lt;/td&gt;
+        &lt;td&gt;Lorem&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Dolor&lt;/td&gt;
+        &lt;td class="numerical"&gt;47.797&lt;/td&gt;
+        &lt;td&gt;Lorem&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th rowspan="2"&gt;Sit&lt;/th&gt;
+        &lt;td&gt;Dolor&lt;/td&gt;
+        &lt;td class="numerical"&gt;09.640&lt;/td&gt;
+        &lt;td&gt;Lorem&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Dolor&lt;/td&gt;
+        &lt;td class="numerical"&gt;12.117&lt;/td&gt;
+        &lt;td&gt;Lorem&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <table>
+    <thead>
+      <tr>
+        <th>Lorem</th>
+        <th>Ipsum</th>
+        <th>Dolor</th>
+        <th>Sit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th rowspan="3">Sit</th>
+        <td>Dolor</td>
+        <td class="numerical">03.788</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <td>Dolor</td>
+        <td class="numerical">32.210</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <td>Dolor</td>
+        <td class="numerical">47.797</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <th rowspan="2">Sit</th>
+        <td>Dolor</td>
+        <td class="numerical">09.640</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <td>Dolor</td>
+        <td class="numerical">12.117</td>
+        <td>Lorem</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3>Large spacing</h3>
+<p>Adds a large amount of padding in the table cells.</p>
+
+<pre><code>
+  &lt;table class="table--spacing-large"&gt;
+  ...
+  &lt;/table&gt;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <table class="table--spacing-large">
+    <thead>
+      <tr>
+        <th>Lorem</th>
+        <th>Ipsum</th>
+        <th>Dolor</th>
+        <th>Sit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th rowspan="3">Sit</th>
+        <td>Dolor</td>
+        <td class="numerical">03.788</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <td>Dolor</td>
+        <td class="numerical">32.210</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <td>Dolor</td>
+        <td class="numerical">47.797</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <th rowspan="2">Sit</th>
+        <td>Dolor</td>
+        <td class="numerical">09.640</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <td>Dolor</td>
+        <td class="numerical">12.117</td>
+        <td>Lorem</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3>Medium spacing</h3>
+<p>Adds a medium amount of padding in the table cells.</p>
+
+<pre><code>
+  &lt;table class="table--spacing-medium"&gt;
+  ...
+  &lt;/table&gt;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <table class="table--spacing-medium">
+    <thead>
+      <tr>
+        <th>Lorem</th>
+        <th>Ipsum</th>
+        <th>Dolor</th>
+        <th>Sit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th rowspan="3">Sit</th>
+        <td>Dolor</td>
+        <td class="numerical">03.788</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <td>Dolor</td>
+        <td class="numerical">32.210</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <td>Dolor</td>
+        <td class="numerical">47.797</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <th rowspan="2">Sit</th>
+        <td>Dolor</td>
+        <td class="numerical">09.640</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <td>Dolor</td>
+        <td class="numerical">12.117</td>
+        <td>Lorem</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3>Small spacing</h3>
+<p>Adds a small amount of padding in the table cells.</p>
+
+<pre><code>
+  &lt;table class="table--spacing-small"&gt;
+  ...
+  &lt;/table&gt;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <table class="table--spacing-small">
+    <thead>
+      <tr>
+        <th>Lorem</th>
+        <th>Ipsum</th>
+        <th>Dolor</th>
+        <th>Sit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th rowspan="3">Sit</th>
+        <td>Dolor</td>
+        <td class="numerical">03.788</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <td>Dolor</td>
+        <td class="numerical">32.210</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <td>Dolor</td>
+        <td class="numerical">47.797</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <th rowspan="2">Sit</th>
+        <td>Dolor</td>
+        <td class="numerical">09.640</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <td>Dolor</td>
+        <td class="numerical">12.117</td>
+        <td>Lorem</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3>Bordered table</h3>
+<p>Adds borders around all table cells.</p>
+
+<pre><code>
+  &lt;table class="table--bordered"&gt;
+  ...
+  &lt;/table&gt;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <table class="table--bordered">
+    <thead>
+      <tr>
+        <th>Lorem</th>
+        <th>Ipsum</th>
+        <th>Dolor</th>
+        <th>Sit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th rowspan="3">Sit</th>
+        <td>Dolor</td>
+        <td class="numerical">03.788</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <td>Dolor</td>
+        <td class="numerical">32.210</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <td>Dolor</td>
+        <td class="numerical">47.797</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <th rowspan="2">Sit</th>
+        <td>Dolor</td>
+        <td class="numerical">09.640</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <td>Dolor</td>
+        <td class="numerical">12.117</td>
+        <td>Lorem</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3>Bordered table rows</h3>
+<p>Adds borders to the bottom on each row.</p>
+
+<pre><code>
+  &lt;table class="table--bordered-rows"&gt;
+  ...
+  &lt;/table&gt;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <table class="table--bordered-rows">
+    <thead>
+      <tr>
+        <th>Lorem</th>
+        <th>Ipsum</th>
+        <th>Dolor</th>
+        <th>Sit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th rowspan="3">Sit</th>
+        <td>Dolor</td>
+        <td class="numerical">03.788</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <td>Dolor</td>
+        <td class="numerical">32.210</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <td>Dolor</td>
+        <td class="numerical">47.797</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <th rowspan="2">Sit</th>
+        <td>Dolor</td>
+        <td class="numerical">09.640</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <td>Dolor</td>
+        <td class="numerical">12.117</td>
+        <td>Lorem</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3>Bordered table columns</h3>
+<p>Adds borders around the columns.</p>
+
+<pre><code>
+  &lt;table class="table--bordered-columns"&gt;
+  ...
+  &lt;/table&gt;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <table class="table--bordered-columns">
+    <thead>
+      <tr>
+        <th>Lorem</th>
+        <th>Ipsum</th>
+        <th>Dolor</th>
+        <th>Sit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th rowspan="3">Sit</th>
+        <td>Dolor</td>
+        <td class="numerical">03.788</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <td>Dolor</td>
+        <td class="numerical">32.210</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <td>Dolor</td>
+        <td class="numerical">47.797</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <th rowspan="2">Sit</th>
+        <td>Dolor</td>
+        <td class="numerical">09.640</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <td>Dolor</td>
+        <td class="numerical">12.117</td>
+        <td>Lorem</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3>Striped table</h3>
+<p>Adds a background color to the odd table rows</p>
+
+<pre><code>
+  &lt;table class="table--striped"&gt;
+  ...
+  &lt;/table&gt;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <table class="table--striped">
+    <thead>
+      <tr>
+        <th>Lorem</th>
+        <th>Ipsum</th>
+        <th>Dolor</th>
+        <th>Sit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th rowspan="3">Sit</th>
+        <td>Dolor</td>
+        <td class="numerical">03.788</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <td>Dolor</td>
+        <td class="numerical">32.210</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <td>Dolor</td>
+        <td class="numerical">47.797</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <th rowspan="2">Sit</th>
+        <td>Dolor</td>
+        <td class="numerical">09.640</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <td>Dolor</td>
+        <td class="numerical">12.117</td>
+        <td>Lorem</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3>Fixed cell width styles</h3>
+<p>Makes the table cells fixed width using <code class="inline-code">table-layout: fixed</code>. <a href="https://css-tricks.com/fixing-tables-long-strings/">How it works</a>. Can be used in conjunction with <a href="/docs/override/size/">Size Overrides</a>.</p>
+
+<pre><code>
+  &lt;table class="table--fixed table--bordered"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th class="size-10"&gt;Lorem&lt;/th&gt;
+      &lt;th class="size-20"&gt;Ipsum&lt;/th&gt;
+      &lt;th class="size-20"&gt;Dolor&lt;/th&gt;
+      &lt;th class="size-50"&gt;Sit&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+  ...
+  &lt;/tbody&gt;
+  &lt;/table&gt;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <table class="table--fixed table--bordered">
+    <thead>
+      <tr>
+        <th class="size-10">Lorem</th>
+        <th class="size-20">Ipsum</th>
+        <th class="size-20">Dolor</th>
+        <th class="size-50">Sit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th rowspan="3">Sit</th>
+        <td>Dolor</td>
+        <td class="numerical">03.788</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <td>Dolor</td>
+        <td class="numerical">32.210</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <td>Dolor</td>
+        <td class="numerical">47.797</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <th rowspan="2">Sit</th>
+        <td>Dolor</td>
+        <td class="numerical">09.640</td>
+        <td>Lorem</td>
+      </tr>
+      <tr>
+        <td>Dolor</td>
+        <td class="numerical">12.117</td>
+        <td>Lorem</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+<h2>Available Classes</h2>
+<ul>
+  <li><code class="inline-code">.numerical</code></li>
+  <li><code class="inline-code">.table--spacing-large</code></li>
+  <li><code class="inline-code">.table--spacing-medium</code></li>
+  <li><code class="inline-code">.table--spacing-small</code></li>
+  <li><code class="inline-code">.table--bordered</code></li>
+  <li><code class="inline-code">.table--bordered-rows</code></li>
+  <li><code class="inline-code">.table--bordered-columns</code></li>
+  <li><code class="inline-code">.table--striped</code></li>
+  <li><code class="inline-code">.table--fixed</code></li>
+</ul>
+
+<h2>Available Variables</h2>
+<ul>
+  <li><code class="inline-code">$table-padding-large</code></li>
+  <li><code class="inline-code">$table-padding-medium</code></li>
+  <li><code class="inline-code">$table-padding-small</code></li>
+  <li><code class="inline-code">$table-border-width</code></li>
+  <li><code class="inline-code">$table-border-style</code></li>
+  <li><code class="inline-code">$table-border-color</code></li>
+  <li><code class="inline-code">$table-stripe-color</code></li>
+</ul>
