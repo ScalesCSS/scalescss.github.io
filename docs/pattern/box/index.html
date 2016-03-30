@@ -1,5 +1,143 @@
 ---
 layout: docs
-title: Pattern Box
+title: Patterns/Box
+github: https://github.com/ScalesCSS/patterns-box
 ---
-hi
+<p>A simple pattern for boxing off content and separating it visually from the surrounding content.</p>
+
+<h2>Dependencies</h2>
+<ul>
+  <li><a href="http://sass-lang.com/">Sass</a> - Either Libsass or Ruby Sass.</li>
+  <li><a href="http://npmjs.com">NPM</a> or <a href="http://bower.io/">Bower</a> - To install and manage the Scales repositories. Not technically required as you could manually install.</li>
+  <li><a href="/docs/utilities/clearfix">Scales Clearfix</a></li>
+</ul>
+
+<h2>Installation</h2>
+
+<pre><code>
+  npm install --save-dev scales-patterns-box
+</code></pre>
+<p>or</p>
+<pre><code>
+  bower install --save-dev scales-patterns-box
+</code></pre>
+
+<h2>Usage</h2>
+<p>The box pattern can be used on any element that you want. Scales gives several classes to control the amount of padding in the box.</p>
+
+<h3>Default Box</h3>
+<p>The default padding on the Default Box is 1em.</p>
+<pre><code>
+  &#x3C;div class=&#x22;box&#x22;&#x3E;
+    The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+  &#x3C;/div&#x3E;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <div class="box">
+      The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+  </div>
+</div>
+
+<h3>Flush Box</h3>
+<p>Flush box removes all padding.</p>
+<pre><code>
+  &#x3C;div class=&#x22;box box--flush&#x22;&#x3E;
+    The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+  &#x3C;/div&#x3E;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <div class="box box--flush">
+      The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+  </div>
+</div>
+
+
+<h3>Tiny Box</h3>
+<p>The default padding on the Tiny Box is .25em.</p>
+<pre><code>
+  &#x3C;div class=&#x22;box box--tiny&#x22;&#x3E;
+    The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+  &#x3C;/div&#x3E;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <div class="box box--tiny">
+      The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+  </div>
+</div>
+
+<h3>Small Box</h3>
+<p>The default padding on the Small Box is .5em.</p>
+<pre><code>
+  &#x3C;div class=&#x22;box box--small&#x22;&#x3E;
+    The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+  &#x3C;/div&#x3E;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <div class="box box--small">
+      The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+  </div>
+</div>
+
+<h3>Large Box</h3>
+<p>The default padding on Large Box is 2em.</p>
+<pre><code>
+  &#x3C;div class=&#x22;box box--large&#x22;&#x3E;
+    The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+  &#x3C;/div&#x3E;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <div class="box box--large">
+      The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+  </div>
+</div>
+
+<h3>Huge Box</h3>
+<p>The default padding on Huge Box is 4em.</p>
+<pre><code>
+  &#x3C;div class=&#x22;box box--huge&#x22;&#x3E;
+    The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+  &#x3C;/div&#x3E;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <div class="box box--huge">
+      The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+  </div>
+</div>
+
+<h2>Other uses</h2>
+<p>Since there are times when you want any element to be boxed off, possibly with different amounts of padding at different breakpoints, the box pattern is also able to be used as a mixin. Simply pass in the padding value you want to use.</p>
+
+<pre><code>
+  @include box($padding);
+</code></pre>
+
+<h2>Available Classes</h2>
+<ul>
+  <li>.box</li>
+  <li>.box--flush</li>
+  <li>.box--tiny</li>
+  <li>.box--small</li>
+  <li>.box--large</li>
+  <li>.box--huge</li>
+</ul>
+
+<h2>Available Variables</h2>
+<ul>
+  <li>$box-padding</li>
+  <li>$box-padding-tiny</li>
+  <li>$box-padding-small</li>
+  <li>$box-padding-large</li>
+  <li>$box-padding-huge</li>
+</ul>
