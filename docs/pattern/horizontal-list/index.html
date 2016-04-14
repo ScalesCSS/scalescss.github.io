@@ -1,5 +1,146 @@
 ---
 layout: docs
-title: Pattern Horizontal List
+title: Patterns/Horizontal List
+github: https://github.com/ScalesCSS/patterns-horizontal-list
 ---
-hi
+<p>A pattern for making a list horizontal instead of vertical. This pattern is particularly useful for various types of navigation, like your site's main navigation, breadcrumbs, and tag lists.</p>
+
+<h2>Dependencies</h2>
+<ul>
+  <li><a href="http://sass-lang.com/">Sass</a> - Either Libsass or Ruby Sass.</li>
+  <li><a href="http://npmjs.com">NPM</a> or <a href="http://bower.io/">Bower</a> - To install and manage the Scales repositories. Not technically required as you could manually install.</li>
+</ul>
+
+<h2>Installation</h2>
+
+<pre><code>
+  npm install --save-dev scales-patterns-horizontal-list
+</code></pre>
+<p>or</p>
+<pre><code>
+  bower install --save-dev scales-patterns-horizontal-list
+</code></pre>
+
+<h2>Usage</h2>
+<p>Horizontal List should be used whenever you need to make an ordered or unordered list horizontal instead of vertical.</p>
+<p>You can extend it with <code class="inline-code">--delimited</code> to semantically mark up a character delimited list for things like tags, etc.</p>
+<p>Scales also provides options to center, right align, or have the list fill the available space.</p>
+
+<h3>Default Horizontal List</h3>
+<p>The default simply makes the list horizontal and left aligned.</p>
+<pre><code>
+  &#x3C;ul class=&#x22;horizontal-list&#x22;&#x3E;
+    &#x3C;li&#x3E;Sass&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;CSS&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;HTML&#x3C;/li&#x3E;
+  &#x3C;/ul&#x3E;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <ul class="horizontal-list">
+    <li>Sass</li>
+    <li>CSS</li>
+    <li>HTML</li>
+  </ul>
+</div>
+
+<h3>Character Delimited Horizontal List</h3>
+<p>The default delimiter is a comma. This can be overridden by the <code class="inline-code">$horizontal-list-delimiter</code> variable.</p>
+<pre><code>
+  &#x3C;ul class=&#x22;horizontal-list horizontal-list--delimited&#x22;&#x3E;
+    &#x3C;li&#x3E;Sass&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;CSS&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;HTML&#x3C;/li&#x3E;
+  &#x3C;/ul&#x3E;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <ul class="horizontal-list horizontal-list--delimited">
+    <li>Sass</li>
+    <li>CSS</li>
+    <li>HTML</li>
+  </ul>
+</div>
+
+<h3>Centered Horizontal List</h3>
+<p>Centers the list in its container.</p>
+<pre><code>
+  &#x3C;ul class=&#x22;horizontal-list horizontal-list--center&#x22;&#x3E;
+    &#x3C;li&#x3E;Sass&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;CSS&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;HTML&#x3C;/li&#x3E;
+  &#x3C;/ul&#x3E;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <ul class="horizontal-list horizontal-list--center">
+    <li>Sass</li>
+    <li>CSS</li>
+    <li>HTML</li>
+  </ul>
+</div>
+
+<h3>Right Aligned Horizontal List</h3>
+<p>Right aligns the list in its container</p>
+<pre><code>
+  &#x3C;ul class=&#x22;horizontal-list horizontal-list--right&#x22;&#x3E;
+    &#x3C;li&#x3E;Sass&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;CSS&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;HTML&#x3C;/li&#x3E;
+  &#x3C;/ul&#x3E;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <ul class="horizontal-list horizontal-list--right">
+    <li>Sass</li>
+    <li>CSS</li>
+    <li>HTML</li>
+  </ul>
+</div>
+
+<h3>Fill Style Horizontal List</h3>
+<p>This forces the list items to take up all of the available space. The content in the list item is centered. You can use <code class="inline-code">horizontal-list-right</code> on the list items to change this default.</p>
+<pre><code>
+  &#x3C;ul class=&#x22;horizontal-list horizontal-list--fill&#x22;&#x3E;
+    &#x3C;li&#x3E;Sass&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;CSS&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;HTML&#x3C;/li&#x3E;
+  &#x3C;/ul&#x3E;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <ul class="horizontal-list horizontal-list--fill">
+    <li>Sass</li>
+    <li>CSS</li>
+    <li>HTML</li>
+  </ul>
+</div>
+
+<h2>Other uses</h2>
+
+<p>Since there are times when you want a list to be horizontal at some media queries and vertical at others, the horizontal list pattern is also able to be used as a mixin or extended as a placeholder.</p>
+
+<pre><code>
+  @include horizontal-list;
+
+  @extend %horizontal-list;
+</code></pre>
+
+<h2>Available Classes</h2>
+<ul>
+  <li><code class="inline-code">.horizontal-list</code></li>
+  <li><code class="inline-code">.horizontal-list--delimited</code></li>
+  <li><code class="inline-code">.horizontal-list--center</code></li>
+  <li><code class="inline-code">.horizontal-list--right</code></li>
+  <li><code class="inline-code">.horizontal-list--fill</code></li>
+</ul>
+
+<h2>Available Variables</h2>
+<ul>
+  <li><code class="inline-code">$horizontal-list-delimiter</code></li>
+</ul>
