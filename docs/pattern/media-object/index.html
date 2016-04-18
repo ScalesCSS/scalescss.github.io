@@ -1,5 +1,232 @@
 ---
 layout: docs
-title: Pattern Media Object
+title: Patterns/Media Object
+github: https://github.com/ScalesCSS/patterns-media-object
 ---
-hi
+<p><strong>DISCLAIMER: For more control, you'll probably want to use the <a href="/docs/pattern/flag">Flag Pattern</a>.</strong> The Media Object is mostly kept around for historical purposes.</p>
+<p>A simple pattern for placing variable amounts of content next to a fixed image or other media. This is based on the Media Object created by <a href="http://twitter.com/stubbornella">Nicole Sullivan</a>.</p>
+
+<p>The media object is probably the most useful OOCSS abstraction. Read more here: <a href="http://stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code">http://stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code</a>.</p>
+
+<h2>Dependencies</h2>
+<ul>
+  <li><a href="http://sass-lang.com/">Sass</a> - Either Libsass or Ruby Sass.</li>
+  <li><a href="http://npmjs.com">NPM</a> or <a href="http://bower.io/">Bower</a> - To install and manage the Scales repositories. Not technically required as you could manually install.</li>
+  <li><a href="/docs/utilities/clearfix">Scales Clearfix</a></li>
+</ul>
+
+<h2>Installation</h2>
+
+<pre><code>
+  npm install --save-dev scales-patterns-media-object
+</code></pre>
+<p>or</p>
+<pre><code>
+  bower install --save-dev scales-patterns-media-object
+</code></pre>
+
+<h2>Usage</h2>
+
+<h3>Default Media Object</h3>
+<p>The default puts an image, or other media, to the left of some content.</p>
+<pre><code>
+  &#x3C;div class=&#x22;media&#x22;&#x3E;
+      &#x3C;a class=&#x22;media__figure&#x22; href=&#x22;http://scalescss.github.io/scales&#x22;&#x3E;
+          &#x3C;img src=&#x22;http://placekitten.com/g/150/150/&#x22;&#x3E;
+      &#x3C;/a&#x3E;
+      &#x3C;div class=&#x22;media__body&#x22;&#x3E;
+          &#x3C;p&#x3E;The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.&#x3C;/p&#x3E;
+      &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <div class="media">
+      <a class="media__figure" href="http://scalescss.github.io/scales">
+          <img src="http://placekitten.com/g/150/150/">
+      </a>
+      <div class="media__body">
+          <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+      </div>
+  </div>
+</div>
+
+<h3>Reversed Media Object</h3>
+<p>Moves the image to the opposite side of the content.</p>
+<pre><code>
+  &#x3C;div class=&#x22;media media--rev&#x22;&#x3E;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <div class="media media--rev">
+    <a class="media__figure" href="http://scalescss.github.io/scales">
+        <img src="http://placekitten.com/g/150/150/">
+    </a>
+    <div class="media__body">
+        <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+    </div>
+</div>
+</div>
+
+<h3>Using the <code class="inline-code">&lt;figure&gt;</code> element.</h3>
+<p>Maybe you want to use the <code class="inline-code">&lt;figure&gt;</code> element instead? Sure thing. The classes are the same.</p>
+<pre><code>
+  &#x3C;figure class=&#x22;media&#x22;&#x3E;
+      &#x3C;a class=&#x22;media__figure&#x22; href=&#x22;http://scalescss.github.io/scales&#x22;&#x3E;
+          &#x3C;img src=&#x22;http://placekitten.com/g/150/150/&#x22;&#x3E;
+      &#x3C;/a&#x3E;
+      &#x3C;figcaption class=&#x22;media__body&#x22;&#x3E;
+          &#x3C;p&#x3E;The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.&#x3C;/p&#x3E;
+      &#x3C;/figcaption&#x3E;
+  &#x3C;/figure&#x3E;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <figure class="media">
+      <a class="media__figure" href="http://scalescss.github.io/scales">
+          <img src="http://placekitten.com/g/150/150/">
+      </a>
+      <figcaption class="media__body">
+          <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h3>Stacked Media Object</h3>
+<p>Moves the image above the content at smaller screen sizes. You can control the breakpoint this happens at with the <code class="inline-code">$media-stacked-breakpoint</code> variable.</p>
+<pre><code>
+  &#x3C;div class=&#x22;media media--stacked&#x22;&#x3E;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <div class="media media--stacked">
+      <a class="media__figure" href="http://scalescss.github.io/scales">
+          <img src="http://placekitten.com/g/150/150/">
+      </a>
+      <div class="media__body">
+          <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+      </div>
+  </div>
+</div>
+
+<h3>Flush Media Object</h3>
+<p>Removes space between the image and the content.</p>
+<pre><code>
+  &#x3C;div class=&#x22;media media--flush&#x22;&#x3E;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <div class="media media--flush">
+      <a class="media__figure" href="http://scalescss.github.io/scales">
+          <img src="http://placekitten.com/g/150/150/">
+      </a>
+      <div class="media__body">
+          <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+      </div>
+  </div>
+</div>
+
+<h3>Tiny Media Object</h3>
+<p>Sets the space between the image and content to <code class="inline-code">.25em</code> by default.</p>
+<pre><code>
+  &#x3C;div class=&#x22;media media--tiny&#x22;&#x3E;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <div class="media media--tiny">
+      <a class="media__figure" href="http://scalescss.github.io/scales">
+          <img src="http://placekitten.com/g/150/150/">
+      </a>
+      <div class="media__body">
+          <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+      </div>
+  </div>
+</div>
+
+<h3>Small Media Object</h3>
+<p>Sets the space between the image and content to <code class="inline-code">.5em</code> by default.</p>
+<pre><code>
+  &#x3C;div class=&#x22;media media--small&#x22;&#x3E;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <div class="media media--small">
+      <a class="media__figure" href="http://scalescss.github.io/scales">
+          <img src="http://placekitten.com/g/150/150/">
+      </a>
+      <div class="media__body">
+          <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+      </div>
+  </div>
+</div>
+
+<h3>Large Media Object</h3>
+<p>Sets the space between the image and content to <code class="inline-code">2em</code> by default.</p>
+<pre><code>
+  &#x3C;div class=&#x22;media media--large&#x22;&#x3E;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <div class="media media--large">
+      <a class="media__figure" href="http://scalescss.github.io/scales">
+          <img src="http://placekitten.com/g/150/150/">
+      </a>
+      <div class="media__body">
+          <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+      </div>
+  </div>
+</div>
+
+<h3>Huge Media Object</h3>
+<p>Sets the space between the image and content to <code class="inline-code">4em</code> by default.</p>
+<pre><code>
+  &#x3C;div class=&#x22;media media--huge&#x22;&#x3E;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <div class="media media--huge">
+      <a class="media__figure" href="http://scalescss.github.io/scales">
+          <img src="http://placekitten.com/g/150/150/">
+      </a>
+      <div class="media__body">
+          <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+      </div>
+  </div>
+</div>
+
+<h2>Available Classes</h2>
+<ul>
+  <li><code class="inline-code">.media</code></li>
+  <li><code class="inline-code">.media--rev</code></li>
+  <li><code class="inline-code">.media__figure</code></li>
+  <li><code class="inline-code">.media__body</code></li>
+  <li><code class="inline-code">.media--stacked</code></li>
+</ul>
+
+<h3>For changing the space between the image and the content</h3>
+<ul>
+  <li><code class="inline-code">.media--flush</code></li>
+  <li><code class="inline-code">.media--tiny</code></li>
+  <li><code class="inline-code">.media--small</code></li>
+  <li><code class="inline-code">.media--large</code></li>
+  <li><code class="inline-code">.media--huge</code></li>
+</ul>
+
+<h2>Available Variables</h2>
+<ul>
+  <li><code class="inline-code">$media-gutter</code></li>
+  <li><code class="inline-code">$media-gutter-tiny</code></li>
+  <li><code class="inline-code">$media-gutter-small</code></li>
+  <li><code class="inline-code">$media-gutter-large</code></li>
+  <li><code class="inline-code">$media-gutter-huge</code></li>
+  <li><code class="inline-code">$media-stacked-breakpoint</code></li>
+</ul>
