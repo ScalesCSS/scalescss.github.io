@@ -1,5 +1,85 @@
 ---
 layout: docs
-title: Pattern Vertical List
+title: Pattern/Vertical List
+github: https://github.com/ScalesCSS/patterns-vertical-list
 ---
-hi
+<p>A pattern for making a list vertical after it's been made horizontal.</p>
+
+<h2>Dependencies</h2>
+<ul>
+  <li><a href="http://sass-lang.com/">Sass</a> - Either Libsass or Ruby Sass.</li>
+  <li><a href="http://npmjs.com">NPM</a> or <a href="http://bower.io/">Bower</a> - To install and manage the Scales repositories. Not technically required as you could manually install.</li>
+</ul>
+
+<h2>Installation</h2>
+
+<pre><code>
+  npm install --save-dev scales-patterns-vertical-list
+</code></pre>
+<p>or</p>
+<pre><code>
+  bower install --save-dev scales-patterns-vertical-list
+</code></pre>
+
+<h2>Usage</h2>
+<p>Vertical List should be used whenever you need to make an ordered or unordered list vertical instead of horizontal.</p>
+<p>You can extend it with <code class="inline-code">--delimited</code> to semantically mark up a character delimited list for things like tags, etc.</p>
+
+<h3>Default Vertical List</h3>
+<p>The default simply makes a list vertical. It applies <code class="inline-code">display: block</code> to the <code class="inline-code">&lt;li&gt;</code>'s. Unless you have another display property on a list, this class isn't super useful.</p>
+<pre><code>
+  &#x3C;ul class=&#x22;vertical-list&#x22;&#x3E;
+    &#x3C;li&#x3E;Sass&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;CSS&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;HTML&#x3C;/li&#x3E;
+  &#x3C;/ul&#x3E;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <ul class="vertical-list">
+    <li>Sass</li>
+    <li>CSS</li>
+    <li>HTML</li>
+  </ul>
+</div>
+
+<h3>Character Delimited Vertical List</h3>
+<p>The default delimiter is a comma. This can be overridden by the <code class="inline-code">$vertical-list-delimiter</code> variable.</p>
+<pre><code>
+  &#x3C;ul class=&#x22;vertical-list horizontal-list--delimited&#x22;&#x3E;
+    &#x3C;li&#x3E;Sass&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;CSS&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;HTML&#x3C;/li&#x3E;
+  &#x3C;/ul&#x3E;
+</code></pre>
+
+<div class="mbl">
+  <h4>Demo</h4>
+  <ul class="vertical-list vertical-list--delimited">
+    <li>Sass</li>
+    <li>CSS</li>
+    <li>HTML</li>
+  </ul>
+</div>
+
+<h2>Other uses</h2>
+
+<p>Since there are times when you want a list to be vertical at some media queries and horizontal at others, the vertical list pattern is also able to be used as a mixin or extended as a placeholder.</p>
+
+<pre><code>
+  @include vertical-list;
+
+  @extend %vertical-list;
+</code></pre>
+
+<h2>Available Classes</h2>
+<ul>
+  <li><code class="inline-code">.vertical-list</code></li>
+  <li><code class="inline-code">.vertical-list--delimited</code></li>
+</ul>
+
+<h2>Available Variables</h2>
+<ul>
+  <li><code class="inline-code">$vertical-list-delimiter</code></li>
+</ul>
